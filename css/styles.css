@@ -1,0 +1,343 @@
+/*Display Font (Staatliches)*/
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/*Sans-Serif (Poppins)*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Staatliches&display=swap');
+/*Monospace font (Ubuntu Mono)*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Staatliches&family=Ubuntu+Mono&display=swap');
+
+/*Variables*/
+:root{
+    /*color pallette variables*/
+    --highlights: #ffd803;
+    --background: #fffffe;
+    --primary: #272343;
+    --secondary: #e3f6f5;
+    --tertiary: #4fc4cf;
+}
+
+/*Default Styling*/
+*{
+    color: var(--primary);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/*Headings*/
+h1, h2, h3{
+    font-family: 'Bebas Neue', sans-serif;
+    user-select: none;
+}
+
+h2{
+    margin: 10px 0px;
+    font-size: 35px;
+}
+
+h3{
+    margin: 10px 0px;
+    font-size: 25px;
+}
+
+.section-heading{
+    text-align: center;
+}
+
+body{
+    background-color: var(--background);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+button{
+    border: none;
+    font-weight: bold;
+    font-family: 'Ubuntu Mono';
+    color: var(--primary);
+    background-color: var(--highlights);
+    padding: 15px 20px;
+    border-radius: 15px;
+}
+
+.default-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1.2em;
+    border: 2px solid rgba(0, 0, 0, 0.01);
+}
+
+.default-button:hover{
+    border: 2px solid var(--tertiary);
+}
+
+.button-img{
+    height: 30px;
+    display: block;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/*Media Queries*/
+@media screen and (min-width: 650px) {
+    /*Nav-Menu*/
+    #menu-icon{
+        display: none;
+    }
+
+    #nav-menu{
+        display: flex;
+    }
+
+    .default-button{
+        width: 175px;
+    }
+
+    /*Contact Form*/
+    #contact{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #contact-form{
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 650px){
+    ul {
+        display: none;
+    }
+
+    .project-button-container, #about-me-buttons-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .default-button{
+        width: 100%;
+    }
+
+    .card-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .show{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        top: 50px;
+        right: 0;
+        background-color: var(--secondary);
+        padding: 30px;
+    }
+}
+
+/*Navigation styles*/
+header{
+    position: sticky;
+    z-index: 1;
+    top: 0;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: var(--secondary);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid var(--highlights);
+}
+
+#nav-menu{
+    list-style: none;
+    gap: 15px;
+}
+
+.nav-link{
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-link:hover{
+    color: var(--highlights);
+}
+
+#menu-icon{
+    height: 25px;
+}
+
+/*About me section*/
+#about-me{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 30px;
+}
+
+#about-me-img{
+    height: auto;
+    max-width: 90%;
+    justify-self: center;
+    align-self: center;
+    user-select: none;
+    pointer-events: none;
+}
+
+#about-me-text{
+    background-color: var(--secondary);
+    box-shadow: 0 3px 5px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+    padding: 20px 40px;
+    align-self: center;
+    justify-self: center;
+}
+
+#about-me-buttons-container{
+    display: flex;
+    padding: 10px 0px;
+    gap: 15px;
+}
+
+/*Skills Section*/
+#skills{
+    background-color: var(--secondary);
+    box-shadow: 0 3px 5px 1px rgba(0, 0, 0, 0.3);
+    border-top: 2px solid var(--highlights);
+    border-bottom: 2px solid var(--highlights);
+    padding: 25px;
+}
+
+#skills-heading{
+    padding-top: 25px;
+}
+
+#skills-icons-container{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 250px));
+    grid-auto-rows: 250px;
+    gap: 30px;
+    padding: 50px;
+}
+
+.skills-icons{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 3px 5px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+    padding: 20px 20px 50px;
+    background-color: var(--background);
+}
+
+.skills-icons:hover{
+    scale: 1.05;
+    border: 3px solid var(--highlights);
+}
+
+.skills-img{
+    width: 100px;
+    user-select: none;
+    pointer-events: none;
+}
+
+/*Projects section*/
+#projects{
+    padding: 25px 0px;
+}
+
+#card-container{
+    display: grid;
+    padding: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card{
+    background-color: var(--secondary);
+    box-shadow: 0 3px 5px 1px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(0, 0, 0, 0.01);
+    padding: 25px;
+    border-radius: 30px;
+}
+
+.project-card:hover{
+    border: 2px solid var(--highlights);
+}
+
+.card-middle-sect{
+    display: flex;
+    gap: 15px;
+}
+
+.project-button-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/*Contact Section*/
+#contact{
+    padding: 50px 25px;
+    background-color: var(--secondary);
+    box-shadow: 3px -3px 5px rgba(0, 0, 0, 0.3);
+    border-top: 2px solid var(--highlights);
+    border-bottom: 2px solid var(--highlights);
+}
+
+#contact-form{
+    background-color: var(--background);
+    padding: 30px;
+    box-shadow: 0 3px 5px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+}
+
+.form-containers{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+input{
+    height: 25px;
+}
+
+.form-containers button{
+    width: 100%;
+}
+
+textarea{
+    resize: none;
+    font-family: "Poppins", sans-serif;
+}
+
+input:focus, textarea:focus{
+    outline: none;
+    border: 2px solid var(--tertiary);
+}
+
+input, textarea, fieldset{
+    border: 2px solid var(--primary);
+    border-radius: 7px;
+}
+
+legend{font-weight: Bold;}
+
+/*Footer Section*/
+footer{
+    text-align: center;
+    background-color: var(--background);
+    padding: 10px;
+}
